@@ -1,0 +1,42 @@
+﻿<Window x:Class="FirstProject.MaterialCreation"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FirstProject"
+        mc:Ignorable="d"
+        Title="Создание материала" Height="600" Width="400" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" x:Name="TopLabel" FontFamily="Georgia" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Content="Создание материала"/>
+        <Label Content="Тип материала: " FontFamily="Georgia" FontSize="17" Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Наименование: " FontFamily="Georgia" FontSize="18" Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Цена единицы материала: " FontFamily="Georgia" FontSize="15" Grid.Row="3" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Единица материала: " FontFamily="Georgia" FontSize="18" Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Количество в упаковке: " FontFamily="Georgia" FontSize="15" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Количество на складе: " FontFamily="Georgia" FontSize="14" Grid.Row="6" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <Label Content="Минимальное количество: " FontFamily="Georgia" FontSize="13" Grid.Row="7" HorizontalAlignment="Right" VerticalAlignment="Center" />
+        <ComboBox Name="ComboBoxType" Grid.Row="1" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <TextBox x:Name="NameTextBox" Grid.Row="2" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <TextBox x:Name="PriceTextBox" Grid.Row="3" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <ComboBox Name="ComboBoxUnit" Grid.Row="4" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <TextBox x:Name="QuantityTextBox" Grid.Row="5" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <TextBox x:Name="PackageQuantityTextBox" Grid.Row="6" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <TextBox x:Name="MinimumQuantityTextBox" Grid.Row="7" Grid.Column="1" Margin="10" VerticalAlignment="Center"/>
+        <Button x:Name="ButtonCreate" Margin="10" Grid.Row="8" Grid.ColumnSpan="2" FontFamily="Georgia" FontSize="20" Content="Создать" Click="ButtonCreate_Click"/>
+    </Grid>
+</Window>
